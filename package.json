@@ -1,0 +1,40 @@
+{
+  "name": "freqr",
+  "description": "Compute the frequency response of a digital filter",
+  "version": "1.0.0",
+  "author": "Nao Yonamine <mohayonao@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/mohayonao/freqr/issues"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "mocha": "^3.1.2",
+    "npm-run-all": "^3.1.1",
+    "run-with-mocha": "^1.1.0"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "index.js"
+  ],
+  "homepage": "https://github.com/mohayonao/freqr",
+  "keywords": [
+    "filter",
+    "response",
+    "dsp"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mohayonao/freqr.git"
+  },
+  "scripts": {
+    "lint": "eslint index.js test",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm-run-all test",
+    "preversion": "npm run test",
+    "test": "mocha",
+    "travis": "npm run test"
+  }
+}
